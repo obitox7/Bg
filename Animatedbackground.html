@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>animatedbackground</title>
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+#main {
+  background: linear-gradient(90deg, hsla(273, 100%, 50%, 1) 0%, hsla(259, 100%, 47%, 1) 100%);
+
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+}
+.item {
+  position: absolute;
+  background-color:;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow:
+  6px 6px 12px #1d1d1dcb,
+  -4px -4px 10px rgba(255, 255, 255, 0.2),
+  inset 0 0 0 rgba(255, 255, 255, 0.2),
+  inset 0 0 0 #1d1d1dcb;
+}
+#rectangle {
+  width: 28vw;
+  height: 20vw;
+  min-width: 200px;
+  min-height: 140px;
+  top: 25%;
+  left: 20%;
+  border-radius: 0px;
+  animation: example 2s infinite alternate ease-in-out;
+}
+
+#circle1 {
+  width: 17vw;
+  height: 17vw;
+  min-width: 125px;
+  min-height: 125px;
+  top: 25%;
+  left: 67%;
+  animation: example 2s infinite alternate ease-in-out;
+}
+
+#circle2 {
+  width: 14vw;
+  height: 14vw;
+  min-width: 80px;
+  min-height: 80px;
+  top: 68.75%;
+  left: 35%;
+  animation: example 2s infinite alternate ease-in-out;
+}
+
+#diamomd {
+  width: 17vw;
+  min-width: 150px;
+  min-height: 150px;
+  height: 17vw;
+  top: 65.75%;
+  left: 75.2%;
+  animation: example 2s infinite alternate ease-in-out;
+  border-radius: 0px;
+  transform: rotate(45deg);
+}
+@keyframes example{
+    from{
+      box-shadow:
+  6px 6px 12px #1d1d1dcb,
+  -4px -4px 10px rgba(255, 255, 255, 0.2),
+  inset 0 0 0 #1d1d1dcb,
+  inset 0 0 0 rgba(255, 255, 255, 0.2);
+    }
+    to{
+        box-shadow:
+  0 0 0 #1d1d1dcb,
+  0 0 0 rgba(255, 255, 255, 0.2),
+  inset 6px 6px 12px #1d1d1dcb,
+  inset -4px -4px 10px rgba(255, 255, 255, 0.2);
+}
+
+</style>
+<body>
+        <div id="main">
+            <div id="rectangle" class="item"></div>
+             <div id="circle1" class="item"></div>
+             <div id="circle2" class="item"></div>
+             <div id="diamomd" class="item"></div>
+
+        </div #main>
+    
+</body>
+</html>
